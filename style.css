@@ -1,0 +1,182 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #935591, rgb(255, 119, 235));
+    color: lavender;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+/* Navbar Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, height 0.3s ease;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff8de3;
+    text-shadow: 0 0 10px #ff8de3;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff8de3;
+    background: rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 10px #ff8de3;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Home Section */
+.home-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg,#322930, #433540, #321523);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+}
+
+.home-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto; /* Make image responsive */
+    border-radius: 50%;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 60px;
+    background: linear-gradient(135deg,#322930, #433540, #321523);
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    flex: 1;
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navbar items */
+        gap: 10px;
+        padding: 20px 0;
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 80px; /* Below navbar */
+        right: 0;
+        width: 100%;
+        display: none; /* Hide by default */
+    }
+
+    nav.active ul {
+        display: flex; /* Show on click */
+    }
+
+    .home-section {
+        flex-direction: column;
+        text-align: center;
+        height: auto; /* Allow height to adjust */
+        padding: 20px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    #skills-section ul {
+        justify-content: center;
+    }
+}
+
+/* Add styles for smaller devices */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav .logo {
+        font-size: 1.2rem;
+    }
+
+    #contact-section h1 {
+        font-size: 2rem;
+    }
+
+    #skills-section h1 {
+        font-size: 2rem;
+    }
+}
+.footer {
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Add some vertical padding */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: background color */
+    color: white; /* Change text color if needed */
+    position: relative; /* Optional: for positioning */
+    bottom: 0; /* Keep it at the bottom */
+    width: 100%; /* Full width */
+}
